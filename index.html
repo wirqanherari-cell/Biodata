@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wirqan Herari | Portofolio Mahasiswa Teknik Informatika</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <!-- Profil Utama dengan Edit Foto -->
+    <div class="card profil">
+        <div class="foto-container" id="fotoContainer">
+            <img src="Wirqan.jpeg" alt="Foto Profil" class="foto-profil" id="fotoProfil">
+            <div class="edit-overlay">✏️</div>
+        </div>
+        <button class="btn-edit-foto" id="btnEditFoto"><i class="fas fa-camera"></i> Ganti Foto Profil</button>
+        <input type="file" id="uploadFoto" accept="image/jpeg, image/png, image/jpg">
+
+        <h1>Wirqan Herari</h1>
+        <div class="status"><i class="fas fa-graduation-cap"></i> Mahasiswa Teknik Informatika | Semester 4</div>
+        <div class="bio">
+            Saya mahasiswa Teknik Informatika di Universitas Jabal Ghafur. 
+            Saat ini saya masih dalam tahap belajar coding, dan keahlian saya lebih di bidang administrasi dan Microsoft Office. 
+            Saya bekerja paruh waktu di kedai fotocopy sambil kuliah.
+        </div>
+        <div>
+            <a href="mailto:Wirqan05@email.com" class="tombol tombol-email"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://wa.me/6282122528161" class="tombol tombol-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://github.com/wirqanherari-cell" target="_blank" rel="noopener noreferrer" class="tombol tombol-github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>
+
+    <!-- Info Singkat -->
+    <div class="card">
+        <div class="judul"><span><i class="fas fa-id-card"></i> Info Mahasiswa</span></div>
+        <div class="info-baris">
+            <div class="info-kotak"><div class="label">🏛️ Universitas</div><div class="isi">Universitas Jabal Ghafur</div></div>
+            <div class="info-kotak"><div class="label">📚 Jurusan</div><div class="isi">Teknik Informatika</div></div>
+            <div class="info-kotak"><div class="label">📖 Semester</div><div class="isi">4 (Empat)</div></div>
+            <div class="info-kotak"><div class="label">📍 Domisili</div><div class="isi">Aceh</div></div>
+        </div>
+    </div>
+
+    <!-- Keahlian -->
+    <div class="card">
+        <div class="judul"><span><i class="fas fa-code"></i> Keahlian & Tools</span></div>
+        <div class="skills">
+            <span class="skill-item"><i class="fas fa-file-word"></i> Microsoft Word</span>
+            <span class="skill-item"><i class="fas fa-file-excel"></i> Microsoft Excel</span>
+            <span class="skill-item"><i class="fas fa-keyboard"></i> Mengetik cepat (10 jari)</span>
+            <span class="skill-item"><i class="fas fa-print"></i> Scan & Print dokumen</span>
+            <span class="skill-item"><i class="fas fa-copy"></i> Mesin fotocopy</span>
+        </div>
+        <div class="catatan">
+            📌 Catatan: Saya masih belajar pemrograman (HTML, Python, C++ dasar). Untuk saat ini, keahlian utama saya adalah Microsoft Office.
+        </div>
+    </div>
+
+    
+    <!-- Pendidikan -->
+    <div class="card">
+        <div class="judul"><span><i class="fas fa-university"></i> Riwayat Pendidikan</span></div>
+        <div class="pendidikan-item">
+            <h3><i class="fas fa-laptop-code"></i> S1 Teknik Informatika</h3>
+            <div class="tempat">Universitas Jabal Ghafur | 2024 - Sekarang</div>
+            <div class="deskripsi">Semester 4. Mata kuliah yang sudah ditempuh: Algoritma, Dasar Pemrograman, Microsoft Office untuk perkantoran, Pengantar Teknologi Informasi.</div>
+        </div>
+        <div class="pendidikan-item">
+            <h3><i class="fas fa-school"></i> MAN 3 Pidie</h3>
+            <div class="tempat">Jurusan IPA | 2021 - 2024</div>
+        </div>
+    </div>
+
+    <!-- Tugas & Kemampuan Sehari-hari -->
+    <div class="card">
+        <div class="judul"><span><i class="fas fa-check-circle"></i> Yang Bisa Saya Lakukan</span></div>
+        <ul style="margin-left: 20px; color: #2c3e50; line-height: 1.8; font-weight: 450;">
+            <li>Membuat dan merapikan surat, makalah, laporan dengan Microsoft Word</li>
+            <li>Membuat tabel, perhitungan sederhana, dan rekap data di Excel</li>
+            <li>Mengoperasikan mesin fotocopy, printer, scanner</li>
+            <li>Melayani pelanggan dengan ramah dan teliti</li>
+            <li>Bekerja cepat saat ramai dan tetap rapi</li>
+        </ul>
+    </div>
+
+    <!-- Tujuan & Harapan -->
+    <div class="card">
+        <div class="judul"><span><i class="fas fa-bullseye"></i> Tujuan Saya</span></div>
+        <p style="line-height: 1.65; color: #2c3e50;">
+            Saya ingin menyelesaikan kuliah S1 Teknik Informatika tepat waktu sambil tetap bekerja. 
+            Ke depannya, saya ingin menguasai pemrograman dan teknologi informasi, 
+            agar bisa mendapatkan pekerjaan yang lebih baik dan mengembangkan usaha fotocopy keluarga.
+        </p>
+    </div>
+
+    <!-- Portofolio Project -->
+    <div class="card" id="projectCard">
+        <div class="judul">
+            <span><i class="fas fa-folder-open"></i> Portofolio Project</span>
+            <button class="btn-tambah-project" id="btnTambahProject"><i class="fas fa-plus"></i> Tambah Project</button>
+        </div>
+
+        <!-- ============================================================
+             ✏️ EDIT PROJECT DI SINI — langsung di HTML, tidak perlu upload
+             Untuk ubah: ganti teks nama, deskripsi, atau href link-nya
+             ============================================================ -->
+        <div class="project-list">
+
+            <!-- PROJECT 1 -->
+            <div class="project-item">
+                <div class="project-info">
+                    <div class="project-nama">GO-GOJEK</div>
+                    <div class="project-deskripsi">Aplikasi transportasi online sederhana berbasis web. Menampilkan layanan pesan antar dan transportasi.</div>
+                    <div class="project-link">
+                        <a href="https://wirqanherari-cell.github.io/GO-GOJEK/" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Lihat Project
+                        </a>
+                    </div>
+                </div>
+                <span class="badge-default">📌 Default</span>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project-item">
+                <div class="project-info">
+                    <div class="project-nama">Website Pengajuan Warga</div>
+                    <div class="project-deskripsi">Website pengajuan warga terhadap masalah yang ada di sekitar lingkungan tempat tinggal.</div>
+                    <div class="project-link">
+                        <a href="https://wirqanherari-cell.github.io/lapor-/" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Lihat Project
+                        </a>
+                    </div>
+                </div>
+                <span class="badge-default">📌 Default</span>
+            </div>
+
+        </div>
+        <!-- ============================================================ -->
+
+        <!-- Project tambahan dari user (via tombol Tambah Project) -->
+        <div id="projectListContainer" class="project-list" style="margin-top: 12px;"></div>
+    </div>
+
+    <!-- Kontak -->
+    <div class="card">
+        <div class="judul"><span><i class="fas fa-address-card"></i> Hubungi Saya</span></div>
+        <div style="text-align: center; margin-top: 8px;">
+            <p style="margin: 8px 0;"><strong><i class="fas fa-envelope"></i> Email:</strong> wirqanherari@gmail.com</p>
+            <p style="margin: 8px 0;"><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> +62 821-2252-8161</p>
+            <p style="margin: 8px 0;"><strong><i class="fab fa-github"></i> GitHub:</strong> <a href="https://github.com/wirqanherari-cell" target="_blank" rel="noopener noreferrer" style="color:#1e5631; font-weight:600; text-decoration:none;">github.com/wirqanherari-cell</a></p>
+            <hr style="margin: 16px 0;">
+            <p style="font-size: 13px; color: #4a6272;">
+                📍 Domisili: Aceh<br>
+                Siap bekerja paruh waktu atau magang di bidang administrasi perkantoran.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Wirqan Herari — Mahasiswa Teknik Informatika | Portofolio Interaktif
+    </footer>
+</div>
+
+<!-- Modal Form Tambah/Edit Project -->
+<div id="modalProject" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle"><i class="fas fa-plus-circle"></i> Tambah Project Baru</h3>
+        <input type="text" id="projectNama" placeholder="Nama Project (contoh: Aplikasi Kasir Sederhana)" autocomplete="off">
+        <textarea id="projectDeskripsi" placeholder="Deskripsi singkat tentang project..."></textarea>
+        <input type="url" id="projectLink" placeholder="Link demo / GitHub (opsional)">
+        <div class="modal-buttons">
+            <button class="btn-batal" id="btnBatalModal"><i class="fas fa-times"></i> Batal</button>
+            <button class="btn-simpan" id="btnSimpanProject"><i class="fas fa-save"></i> Simpan</button>
+        </div>
+    </div>
+</div>
+
+<div id="toastMsg" class="toast-msg">✅ Berhasil</div>
+
+<script src="script.js"></script>
+</body>
+</html>

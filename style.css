@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 10% 20%, rgba(30, 86, 49, 0.08) 0%, rgba(80, 73, 97, 0.05) 100%);
+    background-color: #3a3e45;
+    padding: 24px 20px;
+    color: #1e293b;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e5631;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Glassmorphism & neon accent */
+.card {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(0px);
+    border-radius: 32px;
+    padding: 28px 26px;
+    margin-bottom: 24px;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(30, 86, 49, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(255,255,240,0.6);
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 40px -14px rgba(30, 86, 49, 0.2);
+}
+
+/* Gradient profile header */
+.profil {
+    background: linear-gradient(145deg, #ffffff 0%, #fefce8 100%);
+    border-bottom: 3px solid #1e5631;
+}
+
+/* Foto dengan efek glow */
+.foto-container {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+}
+.foto-profil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 12px 20px -8px rgba(0,0,0,0.25);
+    border: 4px solid white;
+    transition: all 0.3s;
+}
+.edit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    color: white;
+    font-size: 32px;
+    backdrop-filter: blur(3px);
+}
+.foto-container:hover .edit-overlay {
+    opacity: 1;
+}
+.btn-edit-foto {
+    background: rgba(30,86,49,0.12);
+    border: 1px solid #cbd5e1;
+    padding: 6px 16px;
+    border-radius: 60px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1e5631;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: 0.2s;
+}
+.btn-edit-foto:hover {
+    background: #1e5631;
+    color: white;
+    border-color: #1e5631;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1e5631, #2b7a4b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.3px;
+}
+.status {
+    background: #1e5631;
+    color: white;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 60px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 8px rgba(30,86,49,0.2);
+}
+.bio {
+    color: #2c3e42;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    font-weight: 450;
+}
+
+.tombol {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1e293b;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin: 6px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.tombol-wa {
+    background: #075e54;
+}
+.tombol-email {
+    background: #3b3f5c;
+}
+.tombol-github {
+    background: #24292e;
+}
+.tombol:hover {
+    transform: scale(0.96);
+    filter: brightness(1.05);
+}
+
+.judul {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: -0.2px;
+}
+.judul span i {
+    color: #1e5631;
+    margin-right: 8px;
+}
+
+.btn-tambah-project {
+    background: #1e5631;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.btn-tambah-project:hover {
+    background: #0f3d22;
+    transform: translateY(-2px);
+}
+
+.info-baris {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 6px;
+}
+.info-kotak {
+    background: #f1f5f9;
+    padding: 14px 18px;
+    border-radius: 24px;
+    flex: 1;
+    min-width: 130px;
+    transition: all 0.2s;
+    border-left: 3px solid #1e5631;
+}
+.info-kotak .label {
+    font-size: 12px;
+    color: #475569;
+    letter-spacing: 0.3px;
+}
+.info-kotak .isi {
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 12px 0 8px;
+}
+.skill-item {
+    background: linear-gradient(115deg, #eef5e9, #e2f0e6);
+    padding: 6px 20px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #145c2e;
+    box-shadow: inset 0 0 0 1px rgba(30,86,49,0.15);
+}
+
+.pengalaman-item, .pendidikan-item {
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px dashed #dce5ef;
+}
+.pengalaman-item:last-child, .pendidikan-item:last-child {
+    border-bottom: none;
+}
+.pengalaman-item h3, .pendidikan-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.tempat {
+    color: #1e5631;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 4px 0 12px;
+}
+.deskripsi {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+}
+.catatan {
+    background: #fff7e5;
+    padding: 14px 18px;
+    border-radius: 20px;
+    border-left: 5px solid #f5b042;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #886c27;
+}
+
+/* Project list modern */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.project-item {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid #eef2f6;
+    transition: 0.2s;
+}
+.project-item:hover {
+    border-color: #cbdde0;
+    background: #fefefc;
+}
+.project-nama {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f2b1c;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.project-nama:before {
+    content: "📌";
+    font-size: 16px;
+}
+.project-deskripsi {
+    font-size: 13.5px;
+    color: #44505f;
+    line-height: 1.55;
+    margin-bottom: 8px;
+}
+.project-link {
+    margin-top: 10px;
+}
+.project-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    background: #1e5631;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 40px;
+    transition: 0.2s;
+}
+.project-link a:hover {
+    background: #0f3d22;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(30,86,49,0.25);
+}
+.btn-hapus-project {
+    background: rgba(185, 28, 28, 0.08);
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #aa2e2e;
+    padding: 8px 12px;
+    border-radius: 40px;
+    transition: 0.2s;
+}
+.btn-hapus-project:hover {
+    background: #fee2e2;
+    color: #b91c1c;
+    transform: scale(0.96);
+}
+.badge-default {
+    font-size: 11px;
+    color: #1e5631;
+    background: rgba(30,86,49,0.1);
+    padding: 4px 12px;
+    border-radius: 40px;
+    font-weight: 600;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+/* Modal glass */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 30, 25, 0.6);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 40px;
+    padding: 30px;
+    width: 90%;
+    max-width: 470px;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.2);
+    border: 1px solid rgba(30,86,49,0.2);
+}
+.modal-content h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    border: 1px solid #cfdfe8;
+    border-radius: 28px;
+    font-family: 'Inter', monospace;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.modal-content input:focus, .modal-content textarea:focus {
+    outline: none;
+    border-color: #1e5631;
+    box-shadow: 0 0 0 2px rgba(30,86,49,0.2);
+}
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+.modal-buttons button {
+    padding: 10px 24px;
+    border-radius: 40px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-simpan {
+    background: #1e5631;
+    color: white;
+}
+.btn-batal {
+    background: #eef2f6;
+    color: #2c3e50;
+}
+footer {
+    text-align: center;
+    padding: 18px;
+    font-size: 12px;
+    opacity: 0.75;
+}
+hr {
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid #e2e8f0;
+}
+.toast-msg {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e5631;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 60px;
+    font-weight: 500;
+    z-index: 1200;
+    opacity: 0;
+    transition: opacity 0.25s;
+    pointer-events: none;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+i {
+    margin-right: 6px;
+}
+@media (max-width: 550px) {
+    .card { padding: 20px; }
+    h1 { font-size: 24px; }
+}
